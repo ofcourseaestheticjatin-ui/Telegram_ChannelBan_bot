@@ -1,0 +1,19 @@
+ModuleNotFoundError: No module named 'telegram.enums'
+```[cite: 3]
+
+---
+
+### Reason:
+`python-telegram-bot` library mein `enums` naam ka module nahi hota[cite: 3], ye sabhi constants **`telegram.constants`** ke andar se import hote hain[cite: 3].
+
+---
+
+### Isko fix karne ka tarika:
+
+1. GitHub par jaakar apni repo mein **`bot.py`** file kholein[cite: 2, 3].
+2. Edit button (✏️) par click karein.
+3. **Line 26** ko change karke yeh kar dein:
+
+**Purani line (Galat):**
+```python
+from telegram.enums import ChatMemberStatus, ChatType, ParseMode
